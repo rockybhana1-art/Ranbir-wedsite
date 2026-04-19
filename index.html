@@ -1,0 +1,116 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ranbir Mobile Repair</title>
+
+<style>
+body { margin:0; font-family:Arial; }
+
+/* Navbar */
+.navbar {
+  background:black;
+  overflow:hidden;
+}
+.navbar a {
+  float:left;
+  color:rgb(167, 24, 24);
+  padding:14px 20px;
+  text-decoration:none;
+}
+.navbar a:hover { background:green; }
+
+/* Sections */
+.section {
+  padding:50px;
+  text-align:center;
+}
+#home { background:#13c15b; }
+#about { background:#e6ffe6; }
+#services { background:#f9f9f9; }
+#contact { background:#e6f0ff; }
+#login { background:#fff3e6; }
+
+/* Inputs */
+input {
+  padding:10px;
+  margin:5px;
+  width:200px;
+}
+button {
+  padding:10px 20px;
+  background:green;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+</style>
+
+<script>
+function login() {
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
+
+  if(user=="admin" && pass=="1234") {
+    alert("Login Successful ✅");
+  } else {
+    alert("Wrong Username or Password ❌");
+  }
+}
+
+function sendMessage() {
+  var name = document.getElementById("name").value;
+  alert("Thank you " + name + "! We will contact you soon.");
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+  <a href="#login">Login</a>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section">
+  <h1>Ranbir Singh</h1>
+  <p>Mobile Repair Shop</p>
+  <button onclick="alert('Call us for service!')">Contact Now</button>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+  <h2>About Us</h2>
+  <p>We provide fast and reliable mobile repair services in Faridkot.</p>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="section">
+  <h2>Our Services</h2>
+  <p>Screen Repair | Battery Replacement | Software Fix | Charging Issue</p>
+</div>
+
+
+  
+
+
+<!-- LOGIN -->
+<div id="login" class="section">
+  <h2>Login</h2>
+  
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  
+  <button onclick="login()">Login</button>
+</div>
+
+</body>
+</html>
